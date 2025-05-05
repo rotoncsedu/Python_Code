@@ -47,3 +47,25 @@ fav_num = {
 print(fav_num)
 for i in fav_num:
     print(f"{i} you favourite number is : {fav_num[i]}")
+
+
+for key, value in fav_num.items():
+    print(f"{key} you favourite number is {value}")
+
+for name in fav_num.keys():
+    print(f"Hi {name}")
+    if fav_num[name] == 30:
+        print("You like the number", fav_num[name])
+
+for name in sorted(fav_num.keys()):
+    print(f"{name.title()},thank you for tell your favourite number and it is : {fav_num[name]}")
+
+for number in set(fav_num.values()):
+    print(number)
+
+poll_member = ['Meraj', 'Milon', 'Rahim', 'Belal', 'Saiful']
+for poll_mem in poll_member:
+    if poll_mem in fav_num.keys():
+        print(f"{poll_mem.title()}, thank you for participating to this poll")
+    else:
+        print(f"{poll_mem.title()}, hurry up and participate to this poll")
