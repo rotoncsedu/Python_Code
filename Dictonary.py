@@ -28,4 +28,22 @@ else:
 alien_0['x_position'] = alien_0['x_position'] + x_increase
 print(f"You Updated X position is {alien_0['x_position']}")
 
+del alien_0['speed']
+print(alien_0)
+#speed = alien_0['speed', "Looking Key doesn't exist"]
+speed = alien_0.get('speed', "Looking Key doesn't exist")
+print(speed)
 
+#Practice of Exercise
+person = {'f_name' : 'Meraj', 'l_name' : 'Ali', 'age' : 36, 'city' : 'Saidpur'}
+print(person)
+fav_num = {
+    'Meraj' : 20,
+    'Belal' : 30,
+    'Shamim' : 40,
+    'Arif' : 50,
+    'Sojib' : 30,
+}
+print(fav_num)
+for i in fav_num:
+    print(f"{i} you favourite number is : {fav_num[i]}")
