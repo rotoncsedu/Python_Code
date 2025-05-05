@@ -69,3 +69,55 @@ for poll_mem in poll_member:
         print(f"{poll_mem.title()}, thank you for participating to this poll")
     else:
         print(f"{poll_mem.title()}, hurry up and participate to this poll")
+
+
+#Nesting
+person_0 = {'f_name': 'Belal', 'l_name' : 'Hosen', 'age': 39, 'city' : 'Rajshahi'}
+person_1 = {'f_name': 'Saiful', 'l_name' : 'Islam', 'age': 32, 'city' : 'Nilphamari'}
+
+people = [person,person_0, person_1]
+for person in people:
+    print(person)
+
+fav_place = {
+    'Zayed' : ['Rangpur', 'Rajshahi', 'Syhlet'],
+    'Milon' : ['Cox\'s Bazzar' ],
+    'Mondol' : ['Bandorban', 'Khulna']
+}
+for name in fav_place.keys():
+    print(len(fav_place[name]))
+    if len(fav_place[name]) > 1:
+        print(f"Mr {name} you favourite places are : ")
+    else:
+        print(f"Mr {name} you favourite places is : ")
+    for place in fav_place[name]:
+        print(place)
+
+
+cities = {
+    'Dhaka' : {
+        'country' : 'Bangladesh',
+        'poulation' : '180M',
+        'fact' : 'Capital of Bangladesh'
+    },
+    'Chottogram' : {
+        'country' : 'Bangladesh',
+        'poulation' : '180M',
+        'fact' : 'City of commerce in Bangladesh'
+    },
+    'Delhi' : {
+        'country' : 'India',
+        'poulation' : '1.4B',
+        'fact' : 'Capital of India'
+    },
+}
+
+for city,info in cities.items():
+    print(f"Information about {city} as below:")
+    for key,value in info.items():
+        print(f"{key} : {value}")
+
+
+
+
+
