@@ -1,3 +1,5 @@
+'''
+
 def display_message():
     print("We learn Function of Python in this chapter")
 display_message()
@@ -52,7 +54,6 @@ def greet_users(usernames):
         print(f"Hello {username.title()}! Welcome to the Python world")
 usernames = ['samiul','sabbir','sadiq']
 greet_users(usernames)
-'''
 
 def print_models(unprinted_designs,completed_models):
     while unprinted_designs:
@@ -71,7 +72,9 @@ unprinted_designs = ['iphone case','robot pendant','dodecahedron']
 completed_models = []
 print_models(unprinted_designs,completed_models)
 show_all_models(unprinted_designs,completed_models)
-'''    
+'''  
+
+'''
 def print_models(unprinted_designs,completed_models):
     while unprinted_designs:
         current_design = unprinted_designs.pop()
@@ -89,7 +92,7 @@ unprinted_designs = ['iphone case','robot pendant','dodecahedron']
 completed_models = []
 print_models(unprinted_designs[:],completed_models)
 show_all_models(unprinted_designs,completed_models)
-
+'''
 #8-9.
 def show_message(message):
     print("\nThe following messages are printed:")
@@ -97,6 +100,8 @@ def show_message(message):
         print(msg)
 messages = ['Hello Everyone','Welcome','Thank you']
 show_message(messages)
+
+
 #8-10.
 def send_message(msg_request,sent_msg):
     loc = 0
@@ -160,4 +165,3 @@ car_info = make_car('Nissan','Altima',color='black')
 print(car_info)
 car_info = make_car('Mazda','CX-5')
 print(car_info)
-
