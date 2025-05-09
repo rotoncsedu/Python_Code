@@ -119,3 +119,45 @@ msg_request = ['Hello Everyone','Welcome','Thank you']
 sent_msg = []  
 send_message(msg_request[:],sent_msg)
 show_sent_messages(sent_msg,msg_request)
+
+#8-12.
+def make_sandwich(*items):
+    print("\n The following items will be added to your sandwich:")
+    for item in items:
+        print(f"- {item}")
+make_sandwich('chicken','egg','onion')
+make_sandwich('chicken','egg','onion','tomato')
+make_sandwich()
+
+def make_sandwich(num_of_order,*items):
+    print(f"\nCustomer ordered {num_of_order} sandwichs with following items will be added to the sandwichs:")
+    for item in items:
+        print(f"- {item}")
+make_sandwich(5,'chicken','egg','onion')
+make_sandwich(7,'chicken','egg','onion','tomato')
+make_sandwich(10)
+
+#8-13
+user_profile = {}
+def built_profile(f_name,l_name,age,gender,nationalality):
+    user_profile['fisrt_name'] = f_name
+    user_profile['last_name'] = l_name
+    user_profile['age'] = age
+    user_profile['gender'] = gender
+    user_profile['nationalality'] = nationalality
+    return user_profile
+user_info = built_profile('Al','Imran',35,'Male','Bangladeshi')
+print(user_info)
+def make_car(company_name,model_name,**car_info):
+    car_info['company_name'] = company_name
+    car_info['model_name'] = model_name
+    return car_info
+car_info = make_car('Toyota','Corolla',color='red',year=2020,engine='1.8L')
+print(car_info)
+car_info = make_car('Honda','Civic',color='blue',year=2021)  
+print(car_info)
+car_info = make_car('Nissan','Altima',color='black')
+print(car_info)
+car_info = make_car('Mazda','CX-5')
+print(car_info)
+
