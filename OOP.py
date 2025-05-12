@@ -1,3 +1,6 @@
+from symtable import Class
+
+
 class Restaurant:
     def __init__(self,restaurant_name,cuisine_type):
         self.restaurant_name = restaurant_name
@@ -39,3 +42,55 @@ user_2.describe_user()
 user_2.greet_user()
 user_3.describe_user()
 user_3.greet_user()
+
+class Car:
+    def __init__(self,make,model,year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_riding = 0
+    def descriptive_name(self):
+        full_name = f"{self.make} {self.model} {self.year}."
+        return  full_name
+    def read_odometer(self):
+        print(f"This Card has {self.odometer_riding} miles on it.")
+    def update_odometer(self,mileage):
+        if mileage > self.odometer_riding:
+            self.odometer_riding = mileage
+        else:
+            print("You cannot roll back odometer!")
+    def increment_odometer(self,mile):
+        self.odometer_riding += mile
+
+class ElectricCar (Car):
+    def __init__(self,make,model,year):
+        super().__init__(make,model,year)
+        self.battery_size = Battery(200)
+
+class Battery:
+    def __init__(self,battery_size = 75):
+        self.battery_size = battery_size
+    def describe_battery(self):
+        print(f"This car has a {self.battery_size} KWH battery.")
+    def get_range(self):
+        if self.battery_size < 75:
+            self.range = 250
+        else:
+            self.range = 400
+        print(f"This Car run {self.range} KM on a full charge")
+
+my_tesla = ElectricCar('Tesla','Model S',2019)
+print(my_tesla.descriptive_name())
+my_tesla.battery_size.describe_battery()
+my_tesla.battery_size.get_range()
+
+
+class IceCreamStand(Restaurant):
+    def __init__(self,restaurant_name,cuisine_type,flavors):
+        super().__init__(restaurant_name,cuisine_type)
+        self.flavors = flavors
+    def get_flavors(self):
+        print(f"This Ice Cream has {self.flavors} Flavors.")
+
+my_icecream = IceCreamStand('KFC', 'Fast Food','Venilla')
+my_icecream.get_flavors()
